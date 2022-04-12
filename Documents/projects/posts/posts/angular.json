@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "data": "libs/data",
+    "posts": "apps/posts",
+    "posts-e2e": "apps/posts-e2e",
+    "ui": "libs/ui"
+  }
+}

@@ -1,0 +1,20 @@
+<cdk-accordion class="posts-list">
+  <cdk-accordion-item *ngFor="let post of posts; let index = index;" #accordionItem="cdkAccordionItem" class="post"
+    role="button" tabindex="0" [attr.id]="'accordion-header-' + index" [attr.aria-expanded]="post.expanded"
+    [attr.aria-controls]="'accordion-body-' + index">
+
+    <div class="post-header" (click)="onToggle(post)">
+      {{ post.title }}
+      <span class="post-description">
+        {{ post.expanded ? '-' : '+' }}
+      </span>
+    </div>
+
+    <div class="post-body" role="region" [style.display]="post.expanded ? '' : 'none'"
+      [attr.id]="'accordion-body-' + index" [attr.aria-labelledby]="'accordion-header-' + index">
+      <p>{{ post.body }}</p>
+      <a routerLink="/post/{{post.id}}">Go to post page</a>
+    </div>
+
+  </cdk-accordion-item>
+</cdk-accordion>

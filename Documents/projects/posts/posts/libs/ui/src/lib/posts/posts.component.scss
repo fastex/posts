@@ -1,0 +1,44 @@
+.posts-list {
+  display: block;
+  // max-width: 800px;
+}
+
+.post {
+  display: block;
+  border: solid 1px #ccc;
+}
+
+.post + .post {
+  border-top: none;
+}
+
+.post-header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.post-description {
+  font-size: 0.85em;
+  color: #999;
+}
+
+.post-header,
+.post-body {
+  padding: 16px;
+}
+
+.post-header:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.post:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.post:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}

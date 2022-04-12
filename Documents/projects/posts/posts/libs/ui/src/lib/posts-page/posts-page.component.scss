@@ -1,0 +1,11 @@
+.page-container {
+  max-width: 800px;
+  margin: auto;
+
+  .filter-panel {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

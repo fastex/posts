@@ -1,0 +1,8 @@
+<div class="page-container">
+  <div class="filter-panel">
+    <posts-filter [filterValue]="filter$ | async" (filterChanged)="onFilterChanged($event)"></posts-filter>
+  </div>
+  <div class="posts-list">
+    <posts-posts [posts]="posts$ | async" (toggle)="onToggle($event)"></posts-posts>
+  </div>
+</div>
