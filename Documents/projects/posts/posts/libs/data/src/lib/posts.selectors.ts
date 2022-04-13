@@ -9,15 +9,12 @@ export const filteredPosts = createSelector(
   selectPosts,
   selectFilter,
   (posts, filterValue) => {
-    console.info('posts selector:', posts);
-    console.info('filter selector:', filterValue);
     const filtered = posts.filter(
       (post) =>
         filterValue.length === 0 ||
         post.title.includes(filterValue) ||
         post.body.includes(filterValue)
     );
-    console.info('filtered list:', filtered);
     return filtered;
   }
 );

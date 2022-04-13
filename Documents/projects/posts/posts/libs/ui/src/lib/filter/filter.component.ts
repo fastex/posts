@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -12,6 +13,7 @@ import { FormControl } from '@angular/forms';
   selector: 'posts-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FilterComponent implements AfterViewInit, OnInit {
   @Input() filterValue: string | undefined | null;
